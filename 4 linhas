@@ -1,0 +1,18 @@
+from ctypes.wintypes import SIZE
+from operator import truediv
+from tkinter import Y
+import pyxel 
+
+pyxel.init(200,200,"tittle=teste")
+
+def setup():
+    SIZE(300,300)
+
+def draw():
+    pyxel.cls(0)
+    pyxel.line(0,0,pyxel.mouse_x, pyxel.mouse_y,9)
+    pyxel.line(200,200,pyxel.mouse_x, pyxel.mouse_y,9)
+    pyxel.line(200,0,pyxel.mouse_x, pyxel.mouse_y,9)
+    pyxel.line(0,200,pyxel.mouse_x, pyxel.mouse_y,9)
+    
+pyxel.run(set,draw)
