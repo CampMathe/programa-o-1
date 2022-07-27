@@ -1,0 +1,20 @@
+from operator import truediv
+from tkinter import Y
+import pyxel 
+
+pyxel.init(160,120,"tittle=teste")
+
+def update():
+    if pyxel.btnp(pyxel.KEY_Q):
+        pyxel.quit()
+
+def draw():
+    pyxel.cls(5)
+    x = pyxel.mouse_x
+    y = pyxel.mouse_y
+    w = 20
+    h = 20
+    pyxel.rect(x,y,w,h,7)
+
+
+pyxel.run(update, draw)
